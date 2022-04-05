@@ -41,3 +41,24 @@ function greet(name){
 function digitize(str) {
     return String(str).split('').reverse().map(Number);
   }
+
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+// The output should be two capital letters with a dot separating them.
+
+// It should look like this:
+
+// Sam Harris => S.H
+
+// patrick feeney => P.F
+
+function abbrevName(name){
+    let arr = name.split(' ').map( element => element[0]);
+    return arr.join('.').toUpperCase();
+  }
+  
+  function abbrevName(name){
+    return name.split(' ').map( element => element[0]).join('.').toUpperCase();
+  }
+  
+  let abbrevName = name => name.split(' ').map( element => element[0]).join('.').toUpperCase();
