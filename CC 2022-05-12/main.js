@@ -75,3 +75,32 @@ function findDifference(a, b) {
 String.prototype.isUpperCase = function() {
     return this == this.toUpperCase()
   }
+
+//   Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero digits.
+
+function isDivisible(n, x, y) {
+    return (n%x == 0 && n%y == 0)
+  }
+
+//   It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
+
+// Return the average of the given array rounded down to its nearest integer.
+
+// The array will never be empty.
+
+function getAverage(marks){
+    let sum = marks.reduce((acc, current) => acc + current)
+    return Math.floor(sum/(marks.length))
+  }
+
+//   Complete the solution so that it reverses all of the words within the string passed in.
+
+function reverseWords(str){
+    return str.split(" ").reverse().join(" ")
+  }
+
+//   Complete the function which takes two arguments and returns all numbers which are divisible by the given divisor. First argument is an array of numbers and the second is the divisor.
+
+function divisibleBy(numbers, divisor){
+    return numbers.filter(num => num % divisor === 0)
+  }
